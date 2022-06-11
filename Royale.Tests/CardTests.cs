@@ -15,24 +15,25 @@ public class CardTests
     public void BeforeEach()
     {
         
-        ChromeOptions opts = new ChromeOptions();
+        /* ChromeOptions opts = new ChromeOptions();
         opts.AddArgument("no-sandbox");
-        opts.Proxy = null;
+        opts.Proxy = null; */
         //shut off proxy?
         // opts.AddArguments("--no-proxy-server");
         // driver = new FirefoxDriver(Path.GetFullPath(@"../../../../" + "_drivers"));
         // driver = new ChromeDriver(Path.GetFullPath(@"../../../../" + "_drivers"));
-        string driverBinLoc = Path.GetFullPath(@"../../../../" + "_drivers");
-        driver = new ChromeDriver(driverBinLoc, opts);
-        driver.Url = "https://statsroyale.com";
+        // string driverBinLoc = Path.GetFullPath(@"../../../../" + "_drivers");
+        // driver = new ChromeDriver(driverBinLoc, opts);
+        // driver = new ChromeDriver(driverBinLoc);
+        // driver.Url = "https://statsroyale.com";
     }
     
     [TearDown]
     public void AfterEach() {
-        driver.Close();
+        // driver.Close();
     }
 
-    [Test]
+    /* [Test]
     public void Card_test() {
         driver.FindElement(By.CssSelector("a[href='/cards']")).Click();
         driver.FindElement(By.CssSelector($"a[href*='Ice+Spirit']")).Click();
@@ -40,7 +41,7 @@ public class CardTests
         Assert.AreEqual("Ice Spirit", cardName.Text);
 
     }
-
+ */
     /* [Test]
     public void Ice_Spirit_is_on_cards_page()
     {
