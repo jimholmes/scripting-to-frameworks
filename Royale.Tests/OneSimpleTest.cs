@@ -14,7 +14,10 @@ namespace Royale.Tests
             var timer = new Stopwatch();
             timer.Start();
             TimeSpan first = timer.Elapsed;
-            IWebDriver driver = new ChromeDriver(Path.GetFullPath(@"../../../../" + "_drivers"));
+            ChromeOptions opts = new ChromeOptions();
+            opts.Proxy = null;
+            // IWebDriver driver = new ChromeDriver(Path.GetFullPath(@"../../../../" + "_drivers"));
+            IWebDriver driver = new ChromeDriver(Path.GetFullPath(@"../../../../" + "_drivers"), opts);
             TimeSpan second = timer.Elapsed;
             driver.Url = "https://statsroyale.com";
             TimeSpan third = timer.Elapsed;
